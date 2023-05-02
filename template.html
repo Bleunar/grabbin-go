@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grub n' Go</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+
+    function extendedMenu(){
+        var menu = document.getElementById('extendedMenu')
+        if (menu.style.display == 'flex'){
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'flex';
+        }
+    }
+
+</script>
+
+<body class="">
+
+    <!-- Navigation Bar -->
+    <nav class="navigationBar fontFam">
+        <div class="navBarContain">
+            <div title="Logo " class="navLogo" onclick="parent.location.href='err.html'">
+                <img src="img/logo.png" alt="logo">
+                <h3>Grub n' GO</h3>
+            </div>
+    
+            <div class="navOptions">
+                <ul>
+                    <li onclick="parent.location.href='testing.html'">Menu</li>
+                    <li onclick="parent.location.href='err.html'">Delivery</li>
+                    <li onclick="parent.location.href='err.html'">About Us</li>
+                    <li onclick="parent.location.href='err.html'">Contact Us</li>
+                </ul>
+    
+                <div class="vLine"></div>
+    
+            <img class="navProfile" onclick="parent.location.href='err.html'" src="img/default-profile.jpg" title="Profile" alt="cart">
+                
+            </div>
+            <img class="extMenuButton" onclick="extendedMenu()" src="img/menu.png" alt="menu">
+        </div>
+        
+
+
+        <div id="extendedMenu" class="extMenu" style="display: none;">
+            <div onclick="parent.location.href='err.html'" class="extMenuProfile">
+                <img src="img/default-profile.jpg" alt="profile">
+                <p>UserName</p>
+            </div>
+            <ul>
+                <li onclick="parent.location.href='err.html'">Menu</li>
+                <li onclick="parent.location.href='err.html'">Delivery</li>
+                <li onclick="parent.location.href='err.html'">About Us</li>
+                <li onclick="parent.location.href='err.html'">Contact Us</li>
+            </ul>
+            <div class="close center" onclick="extendedMenu()">
+                <img src="img/arrowUp.png" alt="arrow">
+            </div>
+        </div>
+    </nav>
+        
+    </div>
+</body>
+</html>

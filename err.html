@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website on Progress</title>
+</head>
+
+<script>
+    function randomVid(){
+        let rando = Math.random() * 3;
+        rando = Math.round(rando);
+        if(rando == 1){
+            var URL = "https://www.youtube.com/embed/tYzMYcUty6s?rel=0?version=3&autoplay=1&mute=1";
+        } else if (rando == 2) {
+            var URL = "https://www.youtube.com/embed/Rl1ImG2b1k8?rel=0?version=3&autoplay=1&mute=1";
+        } else {
+            var URL = "https://www.youtube.com/embed/J-p_0FDlpkw?rel=0?version=3&autoplay=1&mute=1";
+        }
+        var win = window.open(URL, "_blank", 'fullscreen=1');
+    }
+</script>
+
+<style>
+@font-face {
+    font-family: graduate;
+    src: url(fonts/Graduate-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    /* border: 1px solid red; */
+    font-family: graduate;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body{
+    height: 100vh;
+}
+.content{
+    text-align: center;
+    width: 80%;
+    flex-direction: column;
+}
+.content p{
+    margin-top: 2vh;
+}
+
+.content a{
+    background-color: rgb(233, 233, 233);
+    color: black;
+    padding: 1em;
+    margin-top: 1vh;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 250ms;
+}
+.content a:hover{
+    background-color: rgb(220, 224, 233);
+    transition: 250ms;
+}
+#eeee{
+    content: '(source: 'attr(href)')';
+}
+</style>
+<body class="center">
+    <div class="content center">
+        <img src="img/in-progress-Gif.gif" alt="progress">
+        <h1 style="font-size: 2rem;">Website in Progress</h1>
+        <p>The website is still in progress, more contents are coming soon.</p>
+        <a href="index.html">return home</a>
+        <a href="#" onclick="randomVid()">If you need inspiration, Watch This</a>
+    </div>
+</body>
+</html>

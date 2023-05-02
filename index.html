@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grub n' Go</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+
+    function extendedMenu(){
+        var menu = document.getElementById('extendedMenu')
+        if (menu.style.display == 'flex'){
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'flex';
+        }
+    }
+
+</script>
+
+<body class="">
+
+    <!-- Navigation Bar -->
+    <nav class="navigationBar fontFam">
+        <div class="navBarContain">
+            <div title="Logo " class="navLogo" onclick="parent.location.href='template.html'">
+                <img src="img/logo.png" alt="logo">
+                <h3>Grub n' GO</h3>
+            </div>
+    
+            <div class="navOptions">
+                <ul>
+                    <li onclick="parent.location.href='testing.html'">Menu</li>
+                    <li onclick="parent.location.href='err.html'">Delivery</li>
+                    <li onclick="parent.location.href='err.html'">About Us</li>
+                    <li onclick="parent.location.href='err.html'">Contact Us</li>
+                </ul>
+    
+                <div class="vLine"></div>
+    
+            <img class="navProfile" onclick="parent.location.href='err.html'" src="img/default-profile.jpg" title="Profile" alt="cart">
+                
+            </div>
+            <img class="extMenuButton" onclick="extendedMenu()" src="img/menu.png" alt="menu">
+        </div>
+        
+
+
+        <div id="extendedMenu" class="extMenu" style="display: none;">
+            <div onclick="parent.location.href='err.html'" class="extMenuProfile">
+                <img src="img/default-profile.jpg" alt="profile">
+                <p>UserName</p>
+            </div>
+            <ul>
+                <li onclick="parent.location.href='err.html'">Menu</li>
+                <li onclick="parent.location.href='err.html'">Delivery</li>
+                <li onclick="parent.location.href='err.html'">About Us</li>
+                <li onclick="parent.location.href='err.html'">Contact Us</li>
+            </ul>
+            <div class="close center" onclick="extendedMenu()">
+                <img src="img/arrowUp.png" alt="arrow">
+            </div>
+        </div>
+    </nav>
+
+    <div class="containerHome">
+        <div class="spacer"></div>
+        <div class="heroSection fontFam">
+            <div id="prodPointr" class="prodPointr"></div>
+            <div class="heroContent">
+                <h1>Delicious selections, <br>Delivered to YOU!</h1>
+                <p>Treat yourself today!</p>
+            </div>
+            <div onclick="parent.location.href='#prodPointr'" class="orderButton">
+                <p>Order Now</p>
+                <img src="img/vectorArrowRight.png" alt="orderNowArrow">
+            </div>
+            <div class="center downArrow">
+                <img src="img/arrowDown-bouncing.gif" alt="e">
+                <img src="img/arrowDown-bouncing.gif" alt="e">
+            </div>
+        </div>
+
+
+        <!-- Products Section -->
+        <div class="homepageSection prodSect fontFam">
+            <h1>Popular Products</h1>
+            <div class="prodCategory">
+
+                <!-- Product 1 -->
+                <div class="card">
+                    <h2>Name</h2>
+                    <img src="products/jb-1.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3> ₱59.00</h3>
+                        <div class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card">
+                    <h2>Name</h2>
+                    <img src="products/jb-1.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3> ₱59.00</h3>
+                        <div class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card">
+                    <h2>Name</h2>
+                    <img src="products/jb-1.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3> ₱59.00</h3>
+                        <div class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card">
+                    <h2>Name</h2>
+                    <img src="products/jb-1.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3> ₱59.00</h3>
+                        <div class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card">
+                    <h2>Name</h2>
+                    <img src="products/jb-1.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3> ₱59.00</h3>
+                        <div class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Go to PRODUCTS PAGE -->
+            <div class="homeButt">
+                <a href="#">View More >></a>
+            </div>
+
+            <hr>
+
+            <h1>For You</h1>
+            <div class="prodCategory">
+
+                <!-- Product 1 -->
+                <div class="card">
+                    <h2>Name</h2>
+                    <img src="products/md-1.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3> ₱59.00</h3>
+                        <div class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card">
+                    <h2>Name</h2>
+                    <img src="products/jb-1.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3> ₱59.00</h3>
+                        <div class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card">
+                    <h2>Name</h2>
+                    <img src="products/jb-1.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3> ₱59.00</h3>
+                        <div class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card">
+                    <h2>Name</h2>
+                    <img src="products/jb-1.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3> ₱59.00</h3>
+                        <div class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card">
+                    <h2>Name</h2>
+                    <img src="products/jb-1.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3> ₱59.00</h3>
+                        <div class="addToCardLogo">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Go to PRODUCTS PAGE -->
+            <div class="homeButt">
+                <a href="#">View More >></a>
+            </div>
+
+            <hr>
+
+            <h1>Popular Brands</h1>
+            <div class="prodCategory">
+                <div class="cardBrands">
+                    <img src="brands/jb-logo.png" alt="">
+                </div>
+
+                <div class="cardBrands">
+                    <img src="brands/mcdo-logo.png" alt="">
+                </div>
+
+                <div class="cardBrands">
+                    <img src="brands/brgking-logo.png" alt="">
+                </div>
+
+                <div class="cardBrands">
+                    <img src="brands/gasPring-logo.png" alt="">
+                </div>
+                
+                <div class="cardBrands">
+                    <img src="brands/mngInasal-logo.png" alt="">
+                </div>
+
+                <div class="cardBrands">
+                    <img src="brands/strbcks-logo.png" alt="">
+                </div>
+
+                <div class="cardBrands">
+                    <img src="brands/dd-logo.png" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Services/ Why Us? -->
+        <div class="homepageSection servicesSect fontFam">
+            <div class="aboutUs">
+                <h1>About us</h1>
+                <p>Welcome to Grub n' Go , your go-to takeaway / delivery website. We are dedicated to providing excellent experience and service into every aspect of our company. Whether you're shopping online or in-store, we strive to provide the best possible experience for our customers, and we are constantly innovating to meet their needs. Thank you for visiting Grub n' Go, and we look forward to serving you.</p>
+            </div>
+
+            <div class="divdr">
+                <div class="divn"></div>
+            </div>
+
+            <h1>Why Us?</h1>
+            <div class="servicesSectCards">
+                <div class="cardServices">
+                    <h2>Fast Delivery</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptas esse placeat? Soluta repellendus nobis necessitatibus reprehenderit aspernatur minima perspiciatis, iste tempore aperiam veniam est voluptate labore numquam distinctio dolores.</p>
+                </div>
+    
+                <div class="cardServices">
+                    <h2>Wide Variety</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                </div>
+    
+                <div class="cardServices">
+                    <h2>Special Deals</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
