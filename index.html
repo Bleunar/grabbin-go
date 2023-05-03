@@ -5,38 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grub n' Go</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-extra.css">
+    <script src="scripts.js"></script>
 </head>
 
-<script>
+<body>
+    <div onclick="cartClicked()" class="cartCorner fontFam">
+        <h1 id="displayCartNumero">0 Item</h1>
+        <img src="img/cart.png" alt="">
+    </div>
 
-    function extendedMenu(){
-        var menu = document.getElementById('extendedMenu')
-        if (menu.style.display == 'flex'){
-            menu.style.display = 'none';
-        } else {
-            menu.style.display = 'flex';
-        }
-    }
-
-</script>
-
-<body class="">
+    <div class="popoutCheckout fontFam" id="popoutCheckout" style="display: none;">
+        <div class="popoutContain">
+            <h1>Checkout</h1>
+            <div class="popoutCheckContent">
+                <h4>Number of Items: </h4>
+                <h4 id="setCartItems">3</h4>
+            </div>
+            <hr>
+            <div class="popoutCheckContent">
+                <h4>Total: </h4>
+                <h4>P 0.00</h4>
+            </div>
+            <hr>
+            <div class="popoutControls">
+                <h3 class="popExt" onclick="exitPopup()">exit</h3>
+                <h3 class="popCheck" onclick="parent.location.href='checkout.html'">proceed</h3>
+            </div>
+        </div>
+    </div>
 
     <!-- Navigation Bar -->
     <nav class="navigationBar fontFam">
         <div class="navBarContain">
-            <div title="Logo " class="navLogo" onclick="parent.location.href='template.html'">
+            <div title="Logo " class="navLogo" onclick="parent.location.href='index.html'">
                 <img src="img/logo.png" alt="logo">
                 <h3>Grub n' GO</h3>
             </div>
     
             <div class="navOptions">
                 <ul>
-                    <li onclick="parent.location.href='testing.html'">Menu</li>
-                    <li onclick="parent.location.href='err.html'">Address</li>
-                    <li onclick="parent.location.href='err.html'">About Us</li>
-                    <li onclick="parent.location.href='err.html'">Contact Us</li>
+                    <li onclick="parent.location.href='all-products.html'">Menu</li>
+                    <li onclick="parent.location.href='#aboutPointr'">About Us</li>
+                    <li onclick="parent.location.href='contacts.html'">Contact Us</li>
                 </ul>
     
                 <div class="vLine"></div>
@@ -55,10 +68,9 @@
                 <p>UserName</p>
             </div>
             <ul>
-                <li onclick="parent.location.href='err.html'">Menu</li>
-                <li onclick="parent.location.href='err.html'">Address</li>
-                <li onclick="parent.location.href='err.html'">About Us</li>
-                <li onclick="parent.location.href='err.html'">Contact Us</li>
+                <li onclick="parent.location.href='all-products.html'">Menu</li>
+                <li onclick="parent.location.href='#aboutPointr'">About Us</li>
+                <li onclick="parent.location.href='contacts.html'">Contact Us</li>
             </ul>
             <div class="close center" onclick="extendedMenu()">
                 <img src="img/arrowUp.png" alt="arrow">
@@ -69,7 +81,7 @@
     <div class="containerHome">
         <div class="spacer"></div>
         <div class="heroSection fontFam">
-            <div id="prodPointr" class="prodPointr"></div>
+            <div id="prodPointr" class="pointr"></div>
             <div class="heroContent">
                 <h1>Delicious selections, <br>Delivered to YOU!</h1>
                 <p>Treat yourself today!</p>
@@ -91,12 +103,12 @@
             <div class="prodCategory">
 
                 <!-- Product 1 -->
-                <div class="card">
-                    <h2>Name</h2>
-                    <img src="products/jb-1.jpg" alt="">
+                <div class="card" id="card1">
+                    <h2>Jollibee - Y1 w/ Cheeseburger</h2>
+                    <img src="products/jb-y1.png" alt="">
                     <div class="cardBottom">
-                        <h3> ₱59.00</h3>
-                        <div class="addToCardLogo center">
+                        <h3 id="prodPrice">95</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
                             <img src="img/add-to-cart-icon.png" alt="">
                             <h4>Add to Cart</h4>
                         </div>
@@ -104,12 +116,12 @@
                 </div>
 
                 <!-- Product 1 -->
-                <div class="card">
-                    <h2>Name</h2>
+                <div class="card" id="card1">
+                    <h2>Chickenjoy Bucket w/ Spag</h2>
                     <img src="products/jb-1.jpg" alt="">
                     <div class="cardBottom">
-                        <h3> ₱59.00</h3>
-                        <div class="addToCardLogo center">
+                        <h3 id="prodPrice">259</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
                             <img src="img/add-to-cart-icon.png" alt="">
                             <h4>Add to Cart</h4>
                         </div>
@@ -117,12 +129,12 @@
                 </div>
 
                 <!-- Product 1 -->
-                <div class="card">
-                    <h2>Name</h2>
-                    <img src="products/jb-1.jpg" alt="">
+                <div class="card" id="card1">
+                    <h2>McDo - Burger Combo Meal</h2>
+                    <img src="products/mcdo-1.png" alt="">
                     <div class="cardBottom">
-                        <h3> ₱59.00</h3>
-                        <div class="addToCardLogo center">
+                        <h3 id="prodPrice">110</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
                             <img src="img/add-to-cart-icon.png" alt="">
                             <h4>Add to Cart</h4>
                         </div>
@@ -130,12 +142,12 @@
                 </div>
 
                 <!-- Product 1 -->
-                <div class="card">
-                    <h2>Name</h2>
-                    <img src="products/jb-1.jpg" alt="">
+                <div class="card" id="card1">
+                    <h2>PM1 - Mang Inasal</h2>
+                    <img src="products/mnginasal-1.jpg" alt="">
                     <div class="cardBottom">
-                        <h3> ₱59.00</h3>
-                        <div class="addToCardLogo center">
+                        <h3 id="prodPrice">129</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
                             <img src="img/add-to-cart-icon.png" alt="">
                             <h4>Add to Cart</h4>
                         </div>
@@ -143,23 +155,51 @@
                 </div>
 
                 <!-- Product 1 -->
-                <div class="card">
-                    <h2>Name</h2>
-                    <img src="products/jb-1.jpg" alt="">
+                <div class="card" id="card1">
+                    <h2>Pollos Chicken Burger</h2>
+                    <img src="products/pollosMeal.jpg" alt="">
                     <div class="cardBottom">
-                        <h3> ₱59.00</h3>
-                        <div class="addToCardLogo center">
+                        <h3 id="prodPrice">299</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
                             <img src="img/add-to-cart-icon.png" alt="">
                             <h4>Add to Cart</h4>
                         </div>
                     </div>
                 </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>Starbucks Frappe</h2>
+                    <img src="products/Starbucks coffee.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">89</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>Mix n' Match</h2>
+                    <img src="products/md-1.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">75</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+
 
             </div>
 
             <!-- Go to PRODUCTS PAGE -->
             <div class="homeButt">
-                <a href="#">View More >></a>
+                <a href="all-products.html">View More >></a>
             </div>
 
             <hr>
@@ -168,12 +208,77 @@
             <div class="prodCategory">
 
                 <!-- Product 1 -->
-                <div class="card">
-                    <h2>Name</h2>
+                <div class="card" id="card1">
+                    <h2>Milk-Tea</h2>
+                    <img src="products/Milk-Tea.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">79</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>Combo Meal  Pollos</h2>
+                    <img src="products/pollosMeal2.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">149</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>Starbucks Frappe</h2>
+                    <img src="products/Starbucks coffee.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">89</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>PM1 - Mang Inasal</h2>
+                    <img src="products/mnginasal-1.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">129</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>Pollos Chicken Burger</h2>
+                    <img src="products/pollosMeal.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">299</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>Mix n' Match</h2>
                     <img src="products/md-1.jpg" alt="">
                     <div class="cardBottom">
-                        <h3> ₱59.00</h3>
-                        <div class="addToCardLogo center">
+                        <h3 id="prodPrice">75</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
                             <img src="img/add-to-cart-icon.png" alt="">
                             <h4>Add to Cart</h4>
                         </div>
@@ -181,68 +286,34 @@
                 </div>
 
                 <!-- Product 1 -->
-                <div class="card">
-                    <h2>Name</h2>
-                    <img src="products/jb-1.jpg" alt="">
+                <div class="card" id="card1">
+                    <h2>H3 Meal</h2>
+                    <img src="products/1.png" alt="">
                     <div class="cardBottom">
-                        <h3> ₱59.00</h3>
-                        <div class="addToCardLogo center">
+                        <h3 id="prodPrice">109</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
                             <img src="img/add-to-cart-icon.png" alt="">
                             <h4>Add to Cart</h4>
                         </div>
                     </div>
                 </div>
 
-                <!-- Product 1 -->
-                <div class="card">
-                    <h2>Name</h2>
-                    <img src="products/jb-1.jpg" alt="">
-                    <div class="cardBottom">
-                        <h3> ₱59.00</h3>
-                        <div class="addToCardLogo center">
-                            <img src="img/add-to-cart-icon.png" alt="">
-                            <h4>Add to Cart</h4>
-                        </div>
-                    </div>
-                </div>
+                
 
-                <!-- Product 1 -->
-                <div class="card">
-                    <h2>Name</h2>
-                    <img src="products/jb-1.jpg" alt="">
-                    <div class="cardBottom">
-                        <h3> ₱59.00</h3>
-                        <div class="addToCardLogo center">
-                            <img src="img/add-to-cart-icon.png" alt="">
-                            <h4>Add to Cart</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 1 -->
-                <div class="card">
-                    <h2>Name</h2>
-                    <img src="products/jb-1.jpg" alt="">
-                    <div class="cardBottom">
-                        <h3> ₱59.00</h3>
-                        <div class="addToCardLogo">
-                            <img src="img/add-to-cart-icon.png" alt="">
-                            <h4>Add to Cart</h4>
-                        </div>
-                    </div>
-                </div>
+                
 
             </div>
 
             <!-- Go to PRODUCTS PAGE -->
             <div class="homeButt">
-                <a href="#">View More >></a>
+                <a href="all-products.html">View More >></a>
             </div>
 
             <hr>
 
             <h1>Popular Brands</h1>
             <div class="prodCategory">
+                <div id="aboutPointr" class="pointr"></div>
                 <div class="cardBrands">
                     <img src="brands/jb-logo.png" alt="">
                 </div>
@@ -254,10 +325,6 @@
                 <div class="cardBrands">
                     <img src="brands/brgking-logo.png" alt="">
                 </div>
-
-                <div class="cardBrands">
-                    <img src="brands/gasPring-logo.png" alt="">
-                </div>
                 
                 <div class="cardBrands">
                     <img src="brands/mngInasal-logo.png" alt="">
@@ -265,6 +332,10 @@
 
                 <div class="cardBrands">
                     <img src="brands/strbcks-logo.png" alt="">
+                </div>
+
+                <div class="cardBrands">
+                    <img src="brands/gasPring-logo.png" alt="">
                 </div>
 
                 <div class="cardBrands">
@@ -278,8 +349,18 @@
         <div class="homepageSection servicesSect fontFam">
             <div class="aboutUs">
                 <h1>About us</h1>
-                <p>Welcome to Grub n' Go , your go-to takeaway / delivery website. We are dedicated to providing excellent experience and service into every aspect of our company. Whether you're shopping online or in-store, we strive to provide the best possible experience for our customers, and we are constantly innovating to meet their needs. Thank you for visiting Grub n' Go, and we look forward to serving you.</p>
+                <div class="aboutContainer">
+                    <p>Welcome to Grub n' Go , your go-to takeaway / delivery website. We are dedicated to providing excellent experience and service into every aspect of our company. Whether you're shopping online or in-store, we strive to provide the best possible experience for our customers, and we are constantly innovating to meet their needs. Thank you for visiting Grub n' Go, and we look forward to serving you.</p>
+                </div>
+
+                <!-- Go to About Us Page -->
+                <div class="homeButt">
+                    <a href="about.html">Learn More</a>
+                </div>
+
             </div>
+
+
 
             <div class="divdr">
                 <div class="divn"></div>
@@ -309,48 +390,126 @@
         </div>
 
         <div class="homepageSection reviewsSect fontFam">
-            <h1>Testimonialsssssssss</h1>
+            <h1>Testimonials</h1>
             <div class="cardReviewContainer">
 
+                <!-- Review -->
                 <div class="cardReviews">
                     <div class="reviewTop">
-                        <h1>Andres Bonifacio</h1>
+                        <h2>Maxwell</h2>
                         <div class="starsRating">
-                            <img src="img/stars-rating.png" alt="s">
-                            <img src="img/stars-rating.png" alt="t">
-                            <img src="img/stars-rating.png" alt="a">
-                            <img src="img/stars-rating.png" alt="r">
-                            <img src="img/stars-rating.png" alt="s">
+                            <div class="stars">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                            </div>
                             <p>5.0</p>
                         </div>
                     </div>
-    
                     <div class="reviewBottom">
-                        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sapiente minima explicabo sequi voluptatibus eius impedit non a ea quis?"</p>
+                        <p>"I've tried several food delivery services, but this one stands out for its exceptional quality and variety of options. It's definitely worth a try!"</p>
                     </div>
                 </div>
 
-
+                <!-- Review -->
                 <div class="cardReviews">
                     <div class="reviewTop">
-                        <h1>Andres Bonifacio</h1>
+                        <h2>Fred A.</h2>
                         <div class="starsRating">
-                            <img src="img/stars-rating.png" alt="s">
-                            <img src="img/stars-rating.png" alt="t">
-                            <img src="img/stars-rating.png" alt="a">
-                            <img src="img/stars-rating.png" alt="r">
-                            <img src="img/stars-rating.png" alt="s">
+                            <div class="stars">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                            </div>
                             <p>5.0</p>
                         </div>
                     </div>
-    
                     <div class="reviewBottom">
-                        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sapiente minima explicabo sequi voluptatibus eius impedit non a ea quis?"</p>
+                        <p>"The food from this delivery website is always fresh, delicious, and arrives on time. I highly recommend it to anyone looking for a hassle-free and satisfying meal delivery experience."</p>
+                    </div>
+                </div>
+
+                <!-- Review -->
+                <div class="cardReviews">
+                    <div class="reviewTop">
+                        <h2>Walter White</h2>
+                        <div class="starsRating">
+                            <div class="stars">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                            </div>
+                            <p>5.0</p>
+                        </div>
+                    </div>
+                    <div class="reviewBottom">
+                        <p>"Ordering food while at work in the RV have been easier because of this website."</p>
+                    </div>
+                </div>
+
+                <!-- Review -->
+                <div class="cardReviews">
+                    <div class="reviewTop">
+                        <h2>Sarah Lynn</h2>
+                        <div class="starsRating">
+                            <div class="stars">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                            </div>
+                            <p>5.0</p>
+                        </div>
+                    </div>
+                    <div class="reviewBottom">
+                        <p>"Great food and excellent service! Would love to order more"</p>
+                    </div>
+                </div>
+
+                <!-- Review -->
+                <div class="cardReviews">
+                    <div class="reviewTop">
+                        <h2>Diane Nguyen</h2>
+                        <div class="starsRating">
+                            <div class="stars">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                                <img src="img/stars-rating.png" style="height:16px;" alt="s">
+                            </div>
+                            <p>5.0</p>
+                        </div>
+                    </div>
+                    <div class="reviewBottom">
+                        <p> "It's so convenient and easy to use. The food arrives on time and is hot and fresh. I would highly recommend this service to anyone."</p>
                     </div>
                 </div>
 
             </div>
-            
+        </div>
+
+        <!-- Footer -->
+        <div class="homepageSection footerSect">
+            <div class="footerContain">
+                <div class="optionsFooter">
+                    <ul>
+                        <li onclick="parent.location.href='all-products.html'">Menu</li>
+                        <li onclick="parent.location.href='#aboutPointr'">About Us</li>
+                        <li onclick="parent.location.href='contacts.html'">Contact Us</li>
+                    </ul>
+                    <p>Grub n' Go    |    PHINMA - University of Iloilo</p>
+                    <p>Rizal St, Iloilo City Proper, Iloilo City, Iloilo, Philippines </p>
+                    <p>All Rights Reserved 2023</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grub n' Go - Contacts</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-extra.css">
+    <script src="scripts.js"></script>
+</head>
+
+<script>
+
+    function extendedMenu(){
+        var menu = document.getElementById('extendedMenu')
+        if (menu.style.display == 'flex'){
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'flex';
+        }
+    }
+
+</script>
+
+<body class="">
+
+    <!-- Navigation Bar -->
+    <nav class="navigationBar fontFam">
+        <div class="navBarContain">
+            <div title="Logo" class="navLogo" onclick="parent.location.href='index.html'">
+                <img src="img/logo.png" alt="logo">
+                <h3>Grub n' GO</h3>
+            </div>
+    
+            <div class="navOptions">
+                <ul>
+                    <li onclick="parent.location.href='testing.html'">Menu</li>
+                    <li onclick="parent.location.href='err.html'">About Us</li>
+                    <li onclick="parent.location.href='err.html'">Contact Us</li>
+                </ul>
+    
+                <div class="vLine"></div>
+    
+            <img class="navProfile" onclick="parent.location.href='err.html'" src="img/default-profile.jpg" title="Profile" alt="cart">
+                
+            </div>
+            <img class="extMenuButton" onclick="extendedMenu()" src="img/menu.png" alt="menu">
+        </div>
+        
+
+
+        <div id="extendedMenu" class="extMenu" style="display: none;">
+            <div onclick="parent.location.href='err.html'" class="extMenuProfile">
+                <img src="img/default-profile.jpg" alt="profile">
+                <p>UserName</p>
+            </div>
+            <ul>
+                <li onclick="parent.location.href='all-products.html'">Menu</li>
+                <li onclick="parent.location.href='about.html'">About Us</li>
+                <li onclick="parent.location.href='contacts.html'">Contact Us</li>
+            </ul>
+            <div class="close center" onclick="extendedMenu()">
+                <img src="img/arrowUp.png" alt="arrow">
+            </div>
+        </div>
+    </nav>
+        
+    <div class="spacer"></div>
+
+    <div class="contactsContainer fontFam">
+        <h1>Contact Us...</h1>
+
+        <div class="divdr">
+            <div class="divn"></div>
+        </div>
+
+        <div class="contactCardsContain">
+            <div class="contactCard">
+                <p><b>Phone Numbers:</b></p>
+                <p>+639123456789</p>
+                <p>+639876543210</p>
+                <br>
+                <p><b>Telephone Numbers</b></p>
+                <p>+63-2-8123-4567</p>
+            </div>
+
+            <div class="contactCard">
+                <p><b>Socials</b></p>
+                <a href="https://www.facebook.com/phinmaui">Facebook</a>
+                <a href="err.html">Twitter</a>
+                <a href="err.html">Instagram</a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Youtube</a>
+
+            </div>
+
+            <div class="contactCard">
+                <p><b>Address</b></p>
+                <p>PHINMA University of Iloilo <br> Rizal St, Iloilo City Proper, Iloilo City, Iloilo, Philippines </p>
+            </div>
+            
+        </div>
+
+        <hr>
+
+        <h1>...or leave us a comment</h1>
+
+        <div class="leaveUsAComment">
+            <div class="cardContactComment">
+                <form>
+                    <label for="fname">Name</label><br>
+                    <input type="text" id="fname" name="fname"> <p class="noteCmmtn">note: Names and comments of responders are kept anonymous</p><br>
+                    <label for="lname">Comment</label><br>
+                    <input type="text" cols="20" row="3" id="lname" name="lname"><br>
+                    <input type="submit" name="submitCmmnt" id="submitCmmnt" value="Submit Comment">
+                  </form> 
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="homepageSection footerSect">
+        <div class="footerContain">
+            <div class="optionsFooter">
+                <ul>
+                    <li onclick="parent.location.href='all-products.html'">Menu</li>
+                    <li onclick="parent.location.href='#aboutPointr'">About Us</li>
+                    <li onclick="parent.location.href='contacts.html'">Contact Us</li>
+                </ul>
+                <p>Grub n' Go    |    PHINMA - University of Iloilo</p>
+                <p>Rizal St, Iloilo City Proper, Iloilo City, Iloilo, Philippines </p>
+                <p>All Rights Reserved 2023</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

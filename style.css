@@ -31,6 +31,86 @@ html{
     scroll-behavior: smooth
 }
 
+/* Cart in the Corner */
+.cartCorner{
+    height: 50px;
+    width: fit-content;
+    padding-left: 10px;
+    z-index: 20;
+    background-color:rgb(255, 199, 17);
+    color: rgb(0, 0, 0);
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 0 0 0;
+    cursor: pointer;
+    transition: 200ms;
+}
+.cartCorner h1{
+    font-size: 2.2em;
+}
+.cartCorner img{
+    height: 3em;
+}
+.cartCorner:hover{
+    padding-right: 20px;
+}
+
+
+/* Checkout (Popout) */
+.popoutCheckout{
+    height: 110%;
+    width: 110%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 20000;
+    background-color: #000000de;
+}
+.popoutCheckout h1{
+    font-size: 2.5em;
+    text-align: center;
+}
+.popoutContain{
+    width: 60%;
+    background-color: gray;
+    padding: 20px;
+    border-radius: 10px;
+}
+.popoutCheckContent{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.popoutControls{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.popoutControls h3{
+    width: 30%;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.popExt{
+    background-color: lightcoral;
+}
+.popCheck{
+    background-color: lightgreen;
+}
+
 
 /* Navigation Bar */
 .navigationBar{
@@ -212,13 +292,16 @@ html{
     height: fit-content;
     width: 100%;
 }
+.containerHome h1{
+    font-size: 3em;
+}
 .spacer{
     height: 12vh;
 }
 
 
 
-.prodPointr{
+.pointr{
     height: 10vh;
     width: 100%;
     position: absolute;
@@ -341,8 +424,8 @@ html{
     max-width: 100%;
 }
 .homepageSection hr{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .prodSect{
     padding-top: 20px;
@@ -355,7 +438,6 @@ html{
     padding-bottom: 20px;
 }
 .prodSect h1{
-    font-size: 3em;
     padding-left: 20px;
     margin-bottom: 5px;
 }
@@ -369,6 +451,12 @@ html{
     justify-content: center;
     gap: 20px;
     position: relative;
+}
+#prodPrice::before{
+    content: "₱";
+}
+#prodPrice::after{
+    content: ".00";
 }
 .card{
     height: fit-content;
@@ -533,7 +621,6 @@ html{
 }
 /* Services / Why Us */
 .servicesSect{
-    background-color: #e6e6e6;
     color: rgb(12, 12, 12);
     padding-top: 20px;
     padding-bottom: 20px;
@@ -543,7 +630,6 @@ html{
     text-align: center;
 }
 .servicesSect h1{
-    font-size: 3em;
     padding-left: 20px;
     margin-bottom: 5px;
     margin-top: 20px;
@@ -551,14 +637,14 @@ html{
 .servicesSectCards{
     width: 100%;
     display: flex;
-    justify-content: space-around;
-    color: black;
+    gap: 20px;
+    justify-content: center;
 }
 .cardServices{
-    color: white;
+    color: rgb(236, 236, 236);
     text-align: center;
     width: 25%;
-    background-color: rgb(19, 19, 19);
+    background-color:#0c0c0c;
     border-radius: 10px;
 
 }
@@ -578,10 +664,16 @@ html{
     width: 100%;
     margin-bottom: 50px;
 }
+.aboutContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .aboutUs h1{
     font-weight: bolder;
 }
 .aboutUs p{
+    width: 69%;
     padding-right: 20px;
     padding-left: 20px;
     font-weight: lighter;
@@ -609,37 +701,111 @@ html{
     justify-content: center;
 }
 .reviewsSect h1{
-    font-size: 3em;
+    margin-top: 20px;
 }
 .cardReviews{
-    width: 500px;
+    width: 30%;
     display: flex;
     border-radius: 10px;
     overflow: hidden;
 }
-.starsRating{
+.cardReviewContainer{
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.starsRating{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #4e4e4e;
+    border-radius: 5px;
 }
 .starsRating p{
-    padding-left: 20px;
+    width: 100%;
+    text-align: center;
 }
-.starsRating img{
-    height: 1rem;
+.stars{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
-
-.reviewTop{ 
+.stars img{
+    height: 16px;
+}
+.reviewTop{
     padding: 10px;
-    background-color: #cfcfcf;
-    width: 40%;
-}
-.reviewTop h1{
-    white-space: nowrap;
+    background-color:rgb(43, 43, 43);
+    color: white;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .reviewBottom{
+    width: 75%;
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: #e9e9e9;
+    background-color: #b1b1b1;
+}
+@media only screen and (max-width:700px){
+    .cardReviewContainer{
+        flex-direction: column;
+    }
+    .cardReviews{
+        width: 100%;
+        border-radius: 0px;
+    }
+}
+
+
+/* Footer */
+.footerSect{
+    font-family: monospace;
+    margin-top: 20px;
+    background-color: #0c0c0c;
+    color: white;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.footerSect img{
+    padding: 5px;
+    height: 5em;
+    width: 5em;
+    object-fit: contain;
+    background-color:#1a1a1a;
+    border-radius: 20px;
+}
+.footerSect{
+    color: rgb(156, 156, 156);
+}
+.footerContain{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.optionsFooter{
+    text-align: center;
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.optionsFooter ul{
+    font-weight: 900;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    text-decoration: underline;
 }

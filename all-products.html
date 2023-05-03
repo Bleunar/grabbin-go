@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grub n' Go - Products</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-extra.css">
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+    <div onclick="cartClicked()" class="cartCorner fontFam">
+        <h1 id="displayCartNumero">0 Item</h1>
+        <img src="img/cart.png" alt="">
+    </div>
+
+    <div class="popoutCheckout fontFam" id="popoutCheckout" style="display: none;">
+        <div class="popoutContain">
+            <h1>Checkout</h1>
+            <div class="popoutCheckContent">
+                <h4>Number of Items: </h4>
+                <h4 id="setCartItems">3</h4>
+            </div>
+            <hr>
+            <div class="popoutCheckContent">
+                <h4>Total: </h4>
+                <h4>P 0.00</h4>
+            </div>
+            <hr>
+            <div class="popoutControls">
+                <h3 class="popExt" onclick="exitPopup()">exit</h3>
+                <h3 class="popCheck" onclick="checkout.html">proceed</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navigationBar fontFam">
+        <div class="navBarContain">
+            <div title="Logo " class="navLogo" onclick="parent.location.href='index.html'">
+                <img src="img/logo.png" alt="logo">
+                <h3>Grub n' GO</h3>
+            </div>
+            <div class="navOptions">
+                <ul>
+                    <li onclick="parent.location.href='testing.html'">Menu</li>
+                    <li onclick="parent.location.href='err.html'">About Us</li>
+                    <li onclick="parent.location.href='err.html'">Contact Us</li>
+                </ul>
+                <div class="vLine"></div>
+            <img class="navProfile" onclick="parent.location.href='err.html'" src="img/default-profile.jpg" title="Profile" alt="cart">
+            </div>
+            <img class="extMenuButton" onclick="extendedMenu()" src="img/menu.png" alt="menu">
+        </div>
+
+        <div id="extendedMenu" class="extMenu" style="display: none;">
+            <div onclick="parent.location.href='err.html'" class="extMenuProfile">
+                <img src="img/default-profile.jpg" alt="profile">
+                <p>UserName</p>
+            </div>
+            <ul>
+                <li onclick="parent.location.href='all-products.html'">Menu</li>
+                <li onclick="parent.location.href='#aboutPointr'">About Us</li>
+                <li onclick="parent.location.href='contacts.html'">Contact Us</li>
+            </ul>
+            <div class="close center" onclick="extendedMenu()">
+                <img src="img/arrowUp.png" alt="arrow">
+            </div>
+        </div>
+    </nav>
+        
+    <div class="spacer"></div>
+    <!-- Products Section -->
+    <div class="homepageSection prodSect fontFam">
+        <h1>Popular Products</h1>
+        <div class="prodCategory">
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>Jollibee - Y1 w/ Cheeseburger</h2>
+                    <img src="products/jb-y1.png" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">95</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>Chickenjoy Bucket w/ Spag</h2>
+                    <img src="products/jb-1.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">259</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>McDo - Burger Combo Meal</h2>
+                    <img src="products/mcdo-1.png" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">110</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>PM1 - Mang Inasal</h2>
+                    <img src="products/mnginasal-1.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">129</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>Pollos Chicken Burger</h2>
+                    <img src="products/pollosMeal.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">299</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>Milk-Tea</h2>
+                    <img src="products/Milk-Tea.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">79</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>Combo Meal  Pollos</h2>
+                    <img src="products/pollosMeal2.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">149</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>Starbucks Frappe</h2>
+                    <img src="products/Starbucks coffee.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">89</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>Mix n' Match</h2>
+                    <img src="products/md-1.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">75</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>H3 Meal</h2>
+                    <img src="products/1.png" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">109</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+
+
+        <hr>
+
+        <h1>For You</h1>
+        <div class="prodCategory">
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>Milk-Tea</h2>
+                    <img src="products/Milk-Tea.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">79</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>Combo Meal  Pollos</h2>
+                    <img src="products/pollosMeal2.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">149</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>Starbucks Frappe</h2>
+                    <img src="products/Starbucks coffee.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">89</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>Mix n' Match</h2>
+                    <img src="products/md-1.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">75</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>H3 Meal</h2>
+                    <img src="products/1.png" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">109</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>Jollibee - Y1 w/ Cheeseburger</h2>
+                    <img src="products/jb-y1.png" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">95</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>Chickenjoy Bucket w/ Spag</h2>
+                    <img src="products/jb-1.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">259</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>McDo - Burger Combo Meal</h2>
+                    <img src="products/mcdo-1.png" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">110</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>PM1 - Mang Inasal</h2>
+                    <img src="products/mnginasal-1.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">129</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="card" id="card1">
+                    <h2>Pollos Chicken Burger</h2>
+                    <img src="products/pollosMeal.jpg" alt="">
+                    <div class="cardBottom">
+                        <h3 id="prodPrice">299</h3>
+                        <div onclick="addToCartClicked()" class="addToCardLogo center">
+                            <img src="img/add-to-cart-icon.png" alt="">
+                            <h4>Add to Cart</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+        </div>
+
+        <hr>
+
+        <h1>Popular Brands</h1>
+        <div class="prodCategory">
+            <div id="aboutPointr" class="prodPointr"></div>
+            <div class="cardBrands">
+                <img src="brands/jb-logo.png" alt="">
+            </div>
+
+            <div class="cardBrands">
+                <img src="brands/mcdo-logo.png" alt="">
+            </div>
+
+            <div class="cardBrands">
+                <img src="brands/brgking-logo.png" alt="">
+            </div>
+
+            <div class="cardBrands">
+                <img src="brands/gasPring-logo.png" alt="">
+            </div>
+            
+            <div class="cardBrands">
+                <img src="brands/mngInasal-logo.png" alt="">
+            </div>
+
+            <div class="cardBrands">
+                <img src="brands/strbcks-logo.png" alt="">
+            </div>
+
+            <div class="cardBrands">
+                <img src="brands/dd-logo.png" alt="">
+            </div>
+
+            <div class="cardBrands">
+                <img src="brands/cKing-logo.png" alt="">
+            </div>
+
+            <div class="cardBrands">
+                <img src="brands/kfc-logo.png" alt="">
+            </div>
+            
+            <div class="cardBrands">
+                <img src="brands/tkyo-logo.png" alt="">
+            </div>
+
+            <div class="cardBrands">
+                <img src="brands/bnchn-logo.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="homepageSection footerSect">
+        <div class="footerContain">
+            <div class="optionsFooter">
+                <ul>
+                    <li onclick="parent.location.href='all-products.html'">Menu</li>
+                    <li onclick="parent.location.href='err.html'">Address</li>
+                    <li onclick="parent.location.href='#aboutPointr'">About Us</li>
+                    <li onclick="parent.location.href='contacts.html'">Contact Us</li>
+                </ul>
+                <p>Grub n' Go    |    PHINMA - University of Iloilo</p>
+                <p>Rizal St, Iloilo City Proper, Iloilo City, Iloilo, Philippines </p>
+                <p>All Rights Reserved 2023</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

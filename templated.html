@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grub n' Go</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-extra.css">
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+    <div onclick="cartClicked()" class="cartCorner fontFam">
+        <h1 id="displayCartNumero">0 Item</h1>
+        <img src="img/cart.png" alt="">
+    </div>
+
+    <div class="popoutCheckout fontFam" id="popoutCheckout" style="display: none;">
+        <div class="popoutContain">
+            <h1>Checkout</h1>
+            <div class="popoutCheckContent">
+                <h4>Number of Items: </h4>
+                <h4 id="setCartItems">3</h4>
+            </div>
+            <hr>
+            <div class="popoutCheckContent">
+                <h4>Total: </h4>
+                <h4>P 0.00</h4>
+            </div>
+            <hr>
+            <div class="popoutControls">
+                <h3 class="popExt" onclick="exitPopup()">exit</h3>
+                <h3 class="popCheck" onclick="checkout.html">proceed</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navigationBar fontFam">
+        <div class="navBarContain">
+            <div title="Logo " class="navLogo" onclick="parent.location.href='index.html'">
+                <img src="img/logo.png" alt="logo">
+                <h3>Grub n' GO</h3>
+            </div>
+    
+            <div class="navOptions">
+                <ul>
+                    <li onclick="parent.location.href='all-products.html'">Menu</li>
+                    <li onclick="parent.location.href='err.html'">Address</li>
+                    <li onclick="parent.location.href='#aboutPointr'">About Us</li>
+                    <li onclick="parent.location.href='contacts.html'">Contact Us</li>
+                </ul>
+    
+                <div class="vLine"></div>
+    
+            <img class="navProfile" onclick="parent.location.href='err.html'" src="img/default-profile.jpg" title="Profile" alt="cart">
+                
+            </div>
+            <img class="extMenuButton" onclick="extendedMenu()" src="img/menu.png" alt="menu">
+        </div>
+        
+
+
+        <div id="extendedMenu" class="extMenu" style="display: none;">
+            <div onclick="parent.location.href='err.html'" class="extMenuProfile">
+                <img src="img/default-profile.jpg" alt="profile">
+                <p>UserName</p>
+            </div>
+            <ul>
+                <li onclick="parent.location.href='all-products.html'">Menu</li>
+                <li onclick="parent.location.href='err.html'">Address</li>
+                <li onclick="parent.location.href='#aboutPointr'">About Us</li>
+                <li onclick="parent.location.href='contacts.html'">Contact Us</li>
+            </ul>
+            <div class="close center" onclick="extendedMenu()">
+                <img src="img/arrowUp.png" alt="arrow">
+            </div>
+        </div>
+    </nav>
+
+    <div class="containerHome">
+        <div class="spacer"></div>
+
+        <!-- insert here -->
+
+        <!-- Footer -->
+        <div class="homepageSection footerSect">
+            <div class="footerContain">
+                <div class="optionsFooter">
+                    <ul>
+                        <li onclick="parent.location.href='all-products.html'">Menu</li>
+                        <li onclick="parent.location.href='err.html'">Address</li>
+                        <li onclick="parent.location.href='#aboutPointr'">About Us</li>
+                        <li onclick="parent.location.href='contacts.html'">Contact Us</li>
+                    </ul>
+                    <p>Grub n' Go    |    PHINMA - University of Iloilo</p>
+                    <p>Rizal St, Iloilo City Proper, Iloilo City, Iloilo, Philippines </p>
+                    <p>All Rights Reserved 2023</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
