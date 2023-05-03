@@ -598,3 +598,48 @@ html{
         border-radius: 0;
     }
 }
+
+
+
+/* Reviews Section */
+.reviewsSect{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.reviewsSect h1{
+    font-size: 3em;
+}
+.cardReviews{
+    width: 500px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.starsRating{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.starsRating p{
+    padding-left: 20px;
+}
+.starsRating img{
+    height: 1rem;
+}
+
+.reviewTop{ 
+    padding: 10px;
+    background-color: #cfcfcf;
+    width: 40%;
+}
+.reviewTop h1{
+    white-space: nowrap;
+}
+.reviewBottom{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #e9e9e9;
+}
